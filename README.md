@@ -3,12 +3,12 @@ This project is a full-stack application built using React for the front end and
 
 ## Running the Application
 
-1) Clone the Repository:\
+1) Clone the Repository:
 ```
 git clone https://github.com/itznasrullah/CollabDocsAssign.git
 ```
 
-2) Install Dependencies:\
+2) Install Dependencies:
 ```
 // Navigate to the server directory
 cd CollabDocsAssign/server
@@ -19,7 +19,7 @@ cd ../client
 npm install
 ```
 
-3) Start the Development Servers:\
+3) Start the Development Servers:
 ```
 # Start the server (backend)
 cd ../server\
