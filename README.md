@@ -39,23 +39,23 @@ Once the servers run, you can access the application at http://localhost:3000 in
 The backend is built with Node.js and utilizes Express.js as the web framework. It also uses MongoDB as the database, managed through Mongoose. Socket.io is implemented for real-time communication between clients.
 
 ### Dependencies
-express: Fast, unopinionated, minimalist web framework for Node.js.\
-mongoose: MongoDB object modeling tool designed to work in an asynchronous environment.\
-cors: Middleware for enabling Cross-Origin Resource Sharing (CORS).\
-socket.io: Library that enables real-time, bidirectional, and event-based communication between web clients and servers.
+`express`: Fast, unopinionated, minimalist web framework for Node.js.\
+`mongoose`: MongoDB object modeling tool designed to work in an asynchronous environment.\
+`cors`: Middleware for enabling Cross-Origin Resource Sharing (CORS).\
+`socket.io`: Library that enables real-time, bidirectional, and event-based communication between web clients and servers.
 
 ### Scripts
-npm start: Starts the server.\
-npm run dev: Starts the server using nodemon for automatic reloading during development.
+`npm start`: Starts the server.\
+`npm run dev`: Starts the server using nodemon for automatic reloading during development.
 
 ## Frontend (Client)
 The frontend is developed using React.js, providing a responsive and interactive user interface for the collaborative document application.
 
 ### Dependencies
-react: JavaScript library for building user interfaces.\
-react-router-dom: DOM bindings for React Router, enabling declarative routing for React applications.\
-socket.io-client: Client-side library for Socket.io to enable real-time communication with the server.
+`react`: JavaScript library for building user interfaces.\
+`react-router-dom`: DOM bindings for React Router, enabling declarative routing for React applications.\
+`socket.io-client`: Client-side library for Socket.io to enable real-time communication with the server.
 
 ### Scripts
-npm start: Starts the development server.\
-npm run build: Builds the application for production to the build folder.
+`npm start`: Starts the development server.\
+`npm run build`: Builds the application for production to the build folder.
