@@ -22,13 +22,15 @@ npm install
 ```
 
 3) Start the Development Servers:\
-// Start the server (backend)\
+```
+# Start the server (backend)
 cd ../server\
 npm run dev
 
-// Start the client (frontend)\
+# Start the client (frontend)
 cd ../client\
 npm start
+```
 
 4) Access the Application:\
 Once the servers run, you can access the application at http://localhost:3000 in your web browser.
