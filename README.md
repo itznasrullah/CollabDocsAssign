@@ -1,10 +1,6 @@
 # Collaborative Document App
 This project is a full-stack application built using React for the front end and Node.js for the back end. It allows multiple users to collaborate on a document in real time.
 
-## Demo
-
-![Demo GIF](https://drive.google.com/file/d/1jajpLhGN_x8iDTdNOaKgNR7hCUV_KSUo/view)
-
 ## Running the Application
 
 1) Clone the Repository:\
