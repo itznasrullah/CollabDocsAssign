@@ -3,6 +3,8 @@ This project is a full-stack application built using React for the front end and
 
 ## Demo
 
+![Demo GIF](https://drive.google.com/file/d/1jajpLhGN_x8iDTdNOaKgNR7hCUV_KSUo/view?usp=sharing)
+
 ## Running the Application
 
 1) Clone the Repository:\
@@ -13,7 +15,7 @@ git clone https://github.com/itznasrullah/CollabDocsAssign.git
 2) Install Dependencies:\
 ```
 // Navigate to the server directory
-cd collaborative-document/server
+cd CollabDocsAssign/server
 npm install
 
 // Navigate to the client directory
