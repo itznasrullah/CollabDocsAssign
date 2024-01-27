@@ -11,20 +11,20 @@ git clone https://github.com/itznasrullah/CollabDocsAssign.git
 2) Install Dependencies:\
 // Navigate to the server directory\
 cd collaborative-document/server\
-npm install\
+npm install
 
 // Navigate to the client directory\
 cd ../client\
-npm install\
+npm install
 
 3) Start the Development Servers:\
 // Start the server (backend)\
 cd ../server\
-npm run dev\
+npm run dev
 
 // Start the client (frontend)\
 cd ../client\
-npm start\
+npm start
 
 4) Access the Application:\
 Once the servers run, you can access the application at http://localhost:3000 in your web browser.
@@ -36,11 +36,11 @@ The backend is built with Node.js and utilizes Express.js as the web framework. 
 express: Fast, unopinionated, minimalist web framework for Node.js.\
 mongoose: MongoDB object modeling tool designed to work in an asynchronous environment.\
 cors: Middleware for enabling Cross-Origin Resource Sharing (CORS).\
-socket.io: Library that enables real-time, bidirectional, and event-based communication between web clients and servers.\
+socket.io: Library that enables real-time, bidirectional, and event-based communication between web clients and servers.
 
 #### Scripts
 npm start: Starts the server.\
-npm run dev: Starts the server using nodemon for automatic reloading during development.\
+npm run dev: Starts the server using nodemon for automatic reloading during development.
 
 ### Frontend (Client)
 The frontend is developed using React.js, providing a responsive and interactive user interface for the collaborative document application.
@@ -48,8 +48,8 @@ The frontend is developed using React.js, providing a responsive and interactive
 #### Dependencies
 react: JavaScript library for building user interfaces.\
 react-router-dom: DOM bindings for React Router, enabling declarative routing for React applications.\
-socket.io-client: Client-side library for Socket.io to enable real-time communication with the server.\
+socket.io-client: Client-side library for Socket.io to enable real-time communication with the server.
 
 #### Scripts
 npm start: Starts the development server.\
-npm run build: Builds the application for production to the build folder.\
+npm run build: Builds the application for production to the build folder.
