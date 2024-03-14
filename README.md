@@ -10,11 +10,11 @@ git clone https://github.com/itznasrullah/CollabDocsAssign.git
 
 2) Install Dependencies:
 ```
-// Navigate to the server directory
+# Navigate to the server directory
 cd CollabDocsAssign/server
 npm install
 
-// Navigate to the client directory
+# Navigate to the client directory
 cd ../client
 npm install
 ```
@@ -22,11 +22,11 @@ npm install
 3) Start the Development Servers:
 ```
 # Start the server (backend)
-cd ../server\
+cd ../server
 npm run dev
 
 # Start the client (frontend)
-cd ../client\
+cd ../client
 npm start
 ```
 
