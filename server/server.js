@@ -1,44 +1,59 @@
-const Model = require("./Model");
+const http = require('http');
+const socketio = require('socket.io');
+const app = require("./app.js");
+const Document = require("./models/documentModel.js");
 
-const io = require('socket.io')(5000, {
+const server = http.createServer(app);
+
+const io = socketio(server, {
     cors: {
-        origin: '*',
+        origin: process.env.CLIENT_URL,
         methods: ['GET', 'POST'],
-    }
+    },
 });
 
 io.on('connection', (socket) => {
     console.log('A user connected');
 
-    socket.on("get-documentId", async (id) => {
-        if(id == null) return;
+    socket.on('get-documentId', async (id) => {
+        if (!id) return;
 
-        let initialData = "";
-        const findId = await Model.findById(id);
+        let initialData = '';
+        try {
+            const document = await Document.findById(id);
 
-        if(findId == null){
-            // Creating New Document
-            await Model.create({ _id: id, data: "" });
-            console.log("Doc Created");
-        } else{
-            // Getting Old Document
-            initialData = (await Model.findById(id)).data;
-            console.log(initialData);
+            if (!document) {
+                // Creating New Document
+                await Document.create({ _id: id, data: '' });
+                console.log('Document created');
+            } else {
+                // Getting Old Document
+                initialData = document.data;
+                console.log('Document loaded:', initialData);
+            }
+
+            socket.join(id);
+            socket.emit('on-load-docs', initialData);
+
+            socket.on('message', async (data) => {
+                try {
+                    await Document.findByIdAndUpdate(id, { data });
+                    socket.broadcast.to(id).emit('rev-changes', data);
+
+                    console.log('Message from client id:', id, 'data:', data);
+                } catch (error) {
+                    console.error('Error updating document:', error.message);
+                }
+            });
+        } catch (error) {
+            console.error('Error finding or creating document:', error.message);
         }
-
-        socket.join(id);
-
-        socket.emit('on-load-docs', initialData);
-
-        socket.on('message', async (data) => {
-            await Model.findByIdAndUpdate(id, {data: data});
-
-            socket.broadcast.to(id).emit('rev-changes', data);
-            console.log('Message from client id:', id, "data:", data);
-        });
     });
 
     socket.on('disconnect', () => {
         console.log('User disconnected');
     });
 });
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
